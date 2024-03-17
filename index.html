@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Maze Generator by Steffen Grøn Andersen</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Maze Generator by Steffen Grøn Andersen</h1>
+    <div class="settings">
+      <label for="maze-rows">Maze rows:</label>
+      <input type="number" id="maze-rows" name="mazeRows" required><br><br>
+
+      <label for="maze-columns">Maze columns:</label>
+      <input type="number" id="maze-columns" name="mazeColumns" required><br><br>
+
+      <label for="start-row">Start row:</label>
+      <input type="number" id="start-row" name="startRow" required><br><br>
+
+      <label for="start-column">Start column:</label>
+      <input type="number" id="start-column" name="startColumn" required><br><br>
+
+      <label for="goal-row">Goal row:</label>
+      <input type="number" id="goal-row" name="goalRow" required><br><br>
+
+      <label for="goal-column">Goal column:</label>
+      <input type="number" id="goal-column" name="goalColumn" required><br><br>
+
+      <input type="submit" id="generate-maze-btn" value="Generate maze">
+
+  </div>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
