@@ -111,13 +111,13 @@ class Maze {
     }
     return {
       rows: this.rows,
-      columns: this.columns,
-      start: { row: this.startRow, column: this.startColumn },
-      goal: { row: this.goalRow, column: this.goalColumn },
+      cols: this.columns,
+      start: { row: this.startRow, col: this.startColumn },
+      goal: { row: this.goalRow, col: this.goalColumn },
       maze: this.grid.map((row) =>
         row.map((cell) => ({
           row: cell.row,
-          column: cell.column,
+          col: cell.column,
           north: cell.north,
           east: cell.east,
           west: cell.west,
@@ -146,12 +146,9 @@ function generateMaze() {
   const goalRow = document.querySelector("#goal-row").value;
   const goalColumn = document.querySelector("#goal-column").value;
 
-  // Create maze instance
   const maze = new Maze(mazeRows, mazeColumns, startRow, startColumn, goalRow, goalColumn);
 
-  // Generate maze and get JSON representation
   const mazeJSON = maze.generateMaze();
 
-  // Log the JSON representation to the console
   console.log(JSON.stringify(mazeJSON, null, 2));
 }
